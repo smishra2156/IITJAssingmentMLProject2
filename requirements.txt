@@ -1,6 +1,7 @@
 streamlit
+scikit-learn
 joblib
 gdown
-os
 numpy
+pandas
 pickle

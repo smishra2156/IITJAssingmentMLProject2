@@ -1,7 +1,5 @@
 import streamlit as st
 import joblib
-import gdown
-import os
 import numpy as np
 import pickle
 
@@ -17,9 +15,7 @@ st.write("Enter health information to predict the likelihood of diabetes.")
 # Load the pipeline
 try:
     #pipeline = joblib.load(file_path) scaler
-    #pipeline = joblib.load("scaler.pkl")
-    with open("scaler.pkl", 'rb') as file:
-        pipeline = pickle.load(file)
+    pipeline = joblib.load("scaler1.pkl")
     st.success("Model loaded successfully.")
 except Exception as e:
     st.error(f"Failed to load model: {e}")
